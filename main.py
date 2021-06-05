@@ -14,8 +14,6 @@ class Application(tk.Frame):
         print(self.master.winfo_screenwidth())
         print(self.master.winfo_screenheight())
 
-        # アプリ画面(Window)の位置を右下へ表示する関数
-
     # アプリ画面(Window)の位置を右上へ表示する関数
     def getRightUpApp(self):
         # アプリ画面(Window)の幅
@@ -47,8 +45,6 @@ class Application(tk.Frame):
         h = h - height
         self.master.geometry(str(width)+"x"+str(height)+"+"+str(w)+"+"+str(h))
 
-        # アプリ画面(Window)の位置を右下へ表示する関数
-
     # アプリ画面(Window)の位置を左下へ表示する関数
     def getLeftBottomApp(self):
         # アプリ画面(Window)の幅
@@ -62,8 +58,6 @@ class Application(tk.Frame):
         h = h - height
         self.master.geometry(str(width)+"x"+str(height)+"+0"+"+"+str(h))
 
-        # アプリ画面(Window)の位置を左下へ表示する関数
-
     # アプリ画面(Window)の位置を左上へ表示する関数
     def getLeftUpApp(self):
         # アプリ画面(Window)の幅
@@ -71,8 +65,6 @@ class Application(tk.Frame):
         # アプリ画面(Window)の高さ
         height = 200
         self.master.geometry(str(width)+"x"+str(height)+"+0+0")
-
-        # アプリ画面(Window)の位置を左上へ表示する関数
 
     # アプリ画面(Window)をパソコン画面全体へ表示する関数
     def getZoomUp(self):
@@ -82,7 +74,7 @@ class Application(tk.Frame):
         # Windowの初期設定を行う。
         super().__init__(master)
 
-        # self.getSample()
+        self.getSample()
         # self.getSize()
 
         # self.getRightUpApp()
