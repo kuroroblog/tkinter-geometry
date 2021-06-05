@@ -1,5 +1,4 @@
-# tkinter-bind
-Tkinterのbindについてのコード
+# tkinter-geometry
+Tkinterのgeometryについてのコード
 
 # 参考記事
-https://kuroro.blog/python/eI5ApJE1wkU7bHsuwk0H/
