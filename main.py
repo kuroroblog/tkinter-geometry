@@ -37,11 +37,9 @@ class Application(tk.Frame):
         # アプリ画面(Window)の高さ
         height = 200
         # パソコン画面の幅を取得
-        w = self.master.winfo_screenwidth()
-        # 幅調整offset
-        # offsetとは? : https://e-words.jp/w/%E3%82%AA%E3%83%95%E3%82%BB%E3%83%83%E3%83%88.html#:~:text=%E3%82%AA%E3%83%95%E3%82%BB%E3%83%83%E3%83%88%20%E3%80%90offset%E3%80%91,%E3%82%AA%E3%83%95%E3%82%BB%E3%83%83%E3%83%88%E3%81%A8%E3%81%84%E3%81%86%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%9A%E3%81%84%E3%80%82
-        w = w - width
-        self.master.geometry(str(width)+"x"+str(height)+"+"+str(w)+"+0")
+        pcW = self.master.winfo_screenwidth()
+        x = pcW - width
+        self.master.geometry(str(width)+"x"+str(height)+"+"+str(x)+"+0")
 
     # アプリ画面(Window)の位置を右下へ表示する関数
     def getRightBottomApp(self):
@@ -50,16 +48,12 @@ class Application(tk.Frame):
         # アプリ画面(Window)の高さ
         height = 200
         # パソコン画面の幅を取得
-        w = self.master.winfo_screenwidth()
+        pcW = self.master.winfo_screenwidth()
         # パソコン画面の高さを取得
-        h = self.master.winfo_screenheight()
-        # 幅調整offset
-        # offsetとは? : https://e-words.jp/w/%E3%82%AA%E3%83%95%E3%82%BB%E3%83%83%E3%83%88.html#:~:text=%E3%82%AA%E3%83%95%E3%82%BB%E3%83%83%E3%83%88%20%E3%80%90offset%E3%80%91,%E3%82%AA%E3%83%95%E3%82%BB%E3%83%83%E3%83%88%E3%81%A8%E3%81%84%E3%81%86%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%9A%E3%81%84%E3%80%82
-        w = w - width
-        # 高さ調整offset。
-        # offsetとは? : https://e-words.jp/w/%E3%82%AA%E3%83%95%E3%82%BB%E3%83%83%E3%83%88.html#:~:text=%E3%82%AA%E3%83%95%E3%82%BB%E3%83%83%E3%83%88%20%E3%80%90offset%E3%80%91,%E3%82%AA%E3%83%95%E3%82%BB%E3%83%83%E3%83%88%E3%81%A8%E3%81%84%E3%81%86%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%9A%E3%81%84%E3%80%82
-        h = h - height
-        self.master.geometry(str(width)+"x"+str(height)+"+"+str(w)+"+"+str(h))
+        pcH = self.master.winfo_screenheight()
+        x = pcW - width
+        y = pcH - height
+        self.master.geometry(str(width)+"x"+str(height)+"+"+str(x)+"+"+str(y))
 
     # アプリ画面(Window)の位置を左下へ表示する関数
     def getLeftBottomApp(self):
@@ -68,11 +62,9 @@ class Application(tk.Frame):
         # アプリ画面(Window)の高さ
         height = 200
         # パソコン画面の高さを取得
-        h = self.master.winfo_screenheight()
-        # 高さ調整offset。
-        # offsetとは? : https://e-words.jp/w/%E3%82%AA%E3%83%95%E3%82%BB%E3%83%83%E3%83%88.html#:~:text=%E3%82%AA%E3%83%95%E3%82%BB%E3%83%83%E3%83%88%20%E3%80%90offset%E3%80%91,%E3%82%AA%E3%83%95%E3%82%BB%E3%83%83%E3%83%88%E3%81%A8%E3%81%84%E3%81%86%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%9A%E3%81%84%E3%80%82
-        h = h - height
-        self.master.geometry(str(width)+"x"+str(height)+"+0"+"+"+str(h))
+        pcH = self.master.winfo_screenheight()
+        y = pcH - height
+        self.master.geometry(str(width)+"x"+str(height)+"+0"+"+"+str(y))
 
     # アプリ画面(Window)の位置を左上へ表示する関数
     def getLeftUpApp(self):
