@@ -13,11 +13,18 @@ class Application(tk.Frame):
     # アプリ画面(Window)の位置や大きさを取得する関数
     # パソコン画面の幅・高さを取得する関数
     def getSize(self):
+        # .winfo_geometry()でも可
+        # アプリ画面(Window)の位置や大きさを取得する関数
         print(self.master.geometry())
+        # アプリ画面(Window)の幅を取得する関数
         print(self.master.winfo_width())
+        # アプリ画面(Window)の高さを取得する関数
         print(self.master.winfo_height())
+        # パソコン画面の左上隅を原点(0, 0)とした、x座標を取得する関数
         print(self.master.winfo_x())
+        # パソコン画面の左上隅を原点(0, 0)とした、x座標を取得する関数
         print(self.master.winfo_y())
+
         # パソコン画面の幅を取得する関数
         print(self.master.winfo_screenwidth())
         # パソコン画面の高さを取得する関数
