@@ -10,14 +10,17 @@ class Application(tk.Frame):
         # パソコン画面の左上隅を原点(0, 0)とした、y座標 : 0
         self.master.geometry("300x200+120+0")
 
-    # アプリ画面(Window)の位置、大きさを取得する関数
+    # アプリ画面(Window)の位置や大きさを取得する関数
+    # パソコン画面の幅・高さを取得する関数
     def getSize(self):
         print(self.master.geometry())
         print(self.master.winfo_width())
         print(self.master.winfo_height())
         print(self.master.winfo_x())
         print(self.master.winfo_y())
+        # パソコン画面の幅を取得する関数
         print(self.master.winfo_screenwidth())
+        # パソコン画面の高さを取得する関数
         print(self.master.winfo_screenheight())
 
     # アプリ画面(Window)の位置を右上へ表示する関数
