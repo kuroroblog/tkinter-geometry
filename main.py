@@ -11,6 +11,8 @@ class Application(tk.Frame):
         print(self.master.geometry())
         print(self.master.winfo_width())
         print(self.master.winfo_height())
+        print(self.master.winfo_x())
+        print(self.master.winfo_y())
         print(self.master.winfo_screenwidth())
         print(self.master.winfo_screenheight())
 
@@ -68,13 +70,25 @@ class Application(tk.Frame):
 
     # アプリ画面(Window)をパソコン画面全体へ表示する関数
     def getZoomUp(self):
-        self.master.state('zoomed')
+        # pattern1
+        # パソコン画面の幅を取得
+        w = self.master.winfo_screenwidth()
+        # パソコン画面の高さを取得
+        h = self.master.winfo_screenheight()
+        self.master.geometry(str(w)+"x"+str(h)+"+0"+"+0")
+
+        # pattern2
+        # self.master.state('zoomed')
+
+        # pattern3
+        # attributesについて : https://kuroro.blog/python/tJyCah49cYKRAQAFohsi/
+        # self.master.attributes('-fullscreen', True)
 
     def __init__(self, master=None):
         # Windowの初期設定を行う。
         super().__init__(master)
 
-        self.getSample()
+        # self.getSample()
         # self.getSize()
 
         # self.getRightUpApp()
