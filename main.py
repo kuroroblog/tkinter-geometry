@@ -1,9 +1,13 @@
 import tkinter as tk
 
 class Application(tk.Frame):
-    # アプリ画面(Window)の位置、大きさを設定するサンプル関数
+    # アプリ画面(Window)の位置や大きさを設定するサンプル関数
     def getSample(self):
-        # アプリ画面(Window)の位置、大きさを設定する。
+        # アプリ画面(Window)の位置や大きさを設定する。
+        # アプリ画面(Window)の幅 : 300
+        # アプリ画面(Window)の高さ : 200
+        # パソコン画面の左上隅を原点(0, 0)とした、x座標 : 120
+        # パソコン画面の左上隅を原点(0, 0)とした、y座標 : 0
         self.master.geometry("300x200+120+0")
 
     # アプリ画面(Window)の位置、大きさを取得する関数
