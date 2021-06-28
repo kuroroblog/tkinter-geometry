@@ -95,6 +95,7 @@ class Application(tk.Frame):
         # self.master.state('zoomed')
 
         # pattern3
+        # -fullscreen : アプリ画面(Window)を画面いっぱいに表示させるかどうかを設定。True(画面いっぱいにアプリ画面(Window)を表示する), False(画面いっぱいにアプリ画面(Window)を表示しない)
         # attributesについて : https://kuroro.blog/python/tJyCah49cYKRAQAFohsi/
         # self.master.attributes('-fullscreen', True)
 
